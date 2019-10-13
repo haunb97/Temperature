@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Temperature</title>
+</head>
+<body>
+<script>
+    function Temperature(C) {
+        if (C < -273){alert('hay nhap vao lon hon -273') ; return ;}
+            this.DoC = C;
+            this.CtoF = function () {
+                return this.DoC * 1.8 +32 ;
+            }
+            this.CtoK = function () {
+                return this.DoC + 273 ;
+            }
+
+    }
+     var nhietdo = new Temperature(parseInt(prompt('nhap vao do C')));
+    alert(nhietdo.DoC + ' do C bang ' +nhietdo.CtoF()+ ' do F va '+ nhietdo.CtoK() + ' do K')
+</script>
+</body>
+</html>
